@@ -28,11 +28,15 @@ describe('users-model', () => {
 
         })
 
+        it('should return json', async () => {
+            
+        })
+
     })
 
     describe('remove()', () => {
         it('should remove user', async () => {
-             let user = await insert({ name: "leo"})
+            await insert({ name: "leo"})
             await remove(1)
             const users = await db('users');
             expect(users).toHaveLength(0)
